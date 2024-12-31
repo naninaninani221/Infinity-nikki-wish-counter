@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Infinity Nikki Wish Counter</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Infinity Nikki Wish Counter</h1>
+  <div id="wish-form">
+    <input type="text" id="item-name" placeholder="Item Name">
+    <select id="rarity">
+      <option value="3">3★</option>
+      <option value="4">4★</option>
+      <option value="5">5★</option>
+    </select>
+    <input type="date" id="date">
+    <button id="add-wish">Add Wish</button>
+  </div>
+  <table>
+    <thead>
+      <tr>
+        <th>Item Name</th>
+        <th>Rarity</th>
+        <th>Date</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody id="wish-list"></tbody>
+  </table>
+  <script src="script.js"></script>
+</body>
+</html>
