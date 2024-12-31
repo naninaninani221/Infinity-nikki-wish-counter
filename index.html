@@ -8,6 +8,8 @@
 </head>
 <body>
   <h1>Infinity Nikki Wish Counter</h1>
+
+  <!-- Your existing wish form -->
   <div id="wish-form">
     <input type="text" id="item-name" placeholder="Item Name">
     <select id="rarity">
@@ -18,6 +20,13 @@
     <input type="date" id="date">
     <button id="add-wish">Add Wish</button>
   </div>
+
+  <!-- Add this new URL form -->
+  <div id="url-form">
+    <input type="text" id="url-input" placeholder="Enter your Gacha history URL">
+    <button id="submit-url">Submit</button>
+  </div>
+
   <table>
     <thead>
       <tr>
@@ -29,10 +38,7 @@
     </thead>
     <tbody id="wish-list"></tbody>
   </table>
+
+  <!-- Linking your script.js file -->
   <script src="script.js"></script>
 </body>
-</html>
-<div id="url-form">
-  <input type="text" id="url-input" placeholder="Enter your Gacha history URL">
-  <button id="submit-url">Submit</button>
-</div>
