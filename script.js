@@ -1,16 +1,16 @@
-const wishList = document.getElementById("wish-list");
-const addWishButton = document.getElementById("add-wish");
-
-addWishButton.addEventListener("click", () => {
+// Function to add a new wish to the list
+function addWish() {
   const itemName = document.getElementById("item-name").value;
   const rarity = document.getElementById("rarity").value;
   const date = document.getElementById("date").value;
 
-  if (!itemName || !date) {
+  if (!itemName || !rarity || !date) {
     alert("Please fill out all fields.");
     return;
   }
 
+  // Create a new table row for the wish
+  const wishList = document.getElementById("wish-list");
   const row = document.createElement("tr");
   row.innerHTML = `
     <td>${itemName}</td>
@@ -18,18 +18,21 @@ addWishButton.addEventListener("click", () => {
     <td>${date}</td>
     <td><button class="delete-btn">Delete</button></td>
   `;
-
   wishList.appendChild(row);
+
+  // Clear input fields
+  document.getElementById("item-name").value = "";
+  document.getElementById("date").value = "";
 
   // Add delete functionality
   row.querySelector(".delete-btn").addEventListener("click", () => {
     row.remove();
   });
+}
 
-  // Clear input fields
-  document.getElementById("item-name").value = "";
-  document.getElementById("date").value = "";
-});
+// Event listener for adding a new wish
+document.getElementById("add-wish").addEventListener("click", addWish);
+
 // Function to fetch and display gacha history from the URL
 function fetchGachaHistory(url) {
   fetch(url)  // Fetch data from the given URL
